@@ -335,12 +335,24 @@
       letter-spacing: .3em
     }
 
+    .amp {
+      font-family: var(--serif);
+      font-style: italic;
+      font-weight: 500;
+      display: inline-block;
+      padding-inline: 0.14em;
+      line-height: 1;
+      vertical-align: 0.02em;
+    }
+
     .env-top .names {
       font-family: var(--script);
       font-size: clamp(3rem, 12vw, 4.4rem);
-      line-height: 1.1;
+      line-height: 1.35;
       margin: 0;
-      padding-inline: .2em
+      padding-block: 0.18em 0.3em;
+      padding-inline: 0.2em 0.35em;
+      overflow: visible;
     }
 
     .env-top .meta {
@@ -490,7 +502,10 @@
       font-family: var(--script);
       font-size: clamp(1.6rem, 6.4vw, 2.3rem);
       color: var(--ink);
-      line-height: 1.1
+      line-height: 1.35;
+      padding-block: 0.15em 0.25em;
+      padding-inline: 0.1em;
+      overflow: visible;
     }
 
     .env .letter .l-small {
@@ -795,40 +810,39 @@
       font-family: var(--script);
       font-weight: 400;
       font-size: clamp(2.2rem, 8.5vw, 4.8rem);
-      line-height: 1.1;
+      line-height: 1.35;
       margin: 6px 0 0;
       color: var(--ink);
       display: flex;
-      align-items: baseline;
+      align-items: center;
       justify-content: center;
-      gap: clamp(10px, 2.5vw, 20px);
+      gap: clamp(8px, 2vw, 18px);
       text-align: center;
       white-space: nowrap;
+      overflow: visible;
     }
 
-    .couple .bride {
-      display: inline-block;
-      line-height: 1;
-      padding-right: clamp(14px, 3.5vw, 26px);
-    }
-
+    .couple .bride,
     .couple .groom {
       display: inline-block;
-      line-height: 1;
-      padding-left: clamp(8px, 2vw, 16px);
+      line-height: 1.35;
+      padding-block: 0.2em 0.35em;
+      padding-inline: clamp(10px, 2.5vw, 22px) clamp(16px, 4vw, 32px);
+      overflow: visible;
     }
 
     .couple .weds {
       font-family: var(--serif);
       font-style: italic;
-      font-size: clamp(0.85rem, 2.6vw, 1.3rem);
+      font-weight: 500;
+      font-size: clamp(1.4rem, 4.2vw, 2.3rem);
       color: var(--gold);
       -webkit-text-fill-color: var(--gold);
-      margin: 0 clamp(8px, 2vw, 16px);
+      margin: 0 clamp(8px, 1.8vw, 16px);
       align-self: center;
       line-height: 1;
       display: inline-block;
-      letter-spacing: 0.06em;
+      letter-spacing: 0.04em;
     }
 
     .scratch-box {
@@ -946,9 +960,24 @@
       font-family: var(--script);
       font-weight: 400;
       font-size: 2.8rem;
-      margin: 0;
+      margin: 0 0 6px;
       color: var(--ink);
-      line-height: 1.1
+      line-height: 1.35;
+      padding-block: 0.15em 0.25em;
+      padding-inline: 0.1em 0.2em;
+      overflow: visible;
+    }
+
+    .blessing-top {
+      font-family: var(--serif);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.9vw, 1.38rem);
+      line-height: 1.6;
+      color: var(--ink);
+      max-width: 640px;
+      margin: 0 auto 24px;
+      text-align: center;
+      padding-inline: 12px;
     }
 
     .fam p {
@@ -1259,8 +1288,10 @@
       font-weight: 400;
       font-size: clamp(2.8rem, 11vw, 3.6rem);
       margin: 22px 0 0;
-      line-height: 1.1;
-      color: var(--ink)
+      line-height: 1.35;
+      padding-block: 0.12em 0.2em;
+      color: var(--ink);
+      overflow: visible;
     }
 
     .event .meta {
@@ -2111,8 +2142,12 @@
     footer .script {
       font-family: var(--script);
       font-size: clamp(2.6rem, 10vw, 3.4rem);
+      line-height: 1.35;
+      padding-block: 0.15em 0.25em;
+      padding-inline: 0.1em 0.2em;
       color: var(--ink);
-      margin: 0
+      margin: 0;
+      overflow: visible;
     }
 
     footer .tag {
@@ -2262,20 +2297,35 @@
 
       .couple {
         font-size: 2.35rem;
-        gap: 6px;
+        line-height: 1.35;
+        gap: 4px;
+        overflow: visible;
+      }
+
+      .couple .bride,
+      .couple .groom {
+        line-height: 1.35;
+        padding-block: 0.18em 0.32em;
+        overflow: visible;
       }
 
       .couple .bride {
-        padding-right: 18px;
+        padding-inline: 8px 18px;
       }
 
       .couple .groom {
-        padding-left: 10px;
+        padding-inline: 8px 18px;
       }
 
       .couple .weds {
-        font-size: 0.95rem;
+        font-size: 1.45rem;
         margin: 0 8px;
+      }
+
+      .blessing-top {
+        font-size: 1.12rem;
+        margin-bottom: 20px;
+        line-height: 1.55;
       }
 
       .venue-card {
@@ -2342,7 +2392,7 @@
 
     <div class="env-top">
       <p class="eyebrow">The wedding celebration of</p>
-      <p class="names foil">Raj &amp; Bhoomika</p>
+      <p class="names foil">Raj <span class="amp">&amp;</span> Bhoomika</p>
       <p class="meta"><span>16 · 12 · 2026</span><i></i><span>Silvassa</span></p>
     </div>
 
@@ -2352,7 +2402,7 @@
         <span class="letter ptex" aria-hidden="true">
           <span class="mono"></span>
           <span class="l-small">Together with their families</span>
-          <span class="l-script">Raj &amp; Bhoomika</span>
+          <span class="l-script">Raj <span class="amp">&amp;</span> Bhoomika</span>
           <span class="l-small">request the pleasure of your company</span>
         </span>
         <svg class="pocket" viewBox="0 0 142 100" preserveAspectRatio="none" aria-hidden="true">
@@ -2440,16 +2490,15 @@
           height="917"></div>
       <div class="wrap hero-inner">
         <span class="mono" role="img" aria-label="Raj and Bhoomika monogram"></span>
-        <p class="eyebrow">Together with their families</p>
         <h1 class="couple"><span class="groom sheen-text">Raj</span><span class="weds">weds</span><span
             class="bride sheen-text">Bhoomika</span></h1>
         <div class="ornament" aria-hidden="true"><span>✦</span></div>
         <p class="eyebrow">Save the Date</p>
         <div class="scratch-box">
           <div class="scratch-under">
-            <span class="small">Wednesday</span>
-            <span class="day">16 December 2026</span>
-            <span class="small">Gulmohar Resort Khanvel, Silvassa</span>
+            <span class="small">Tuesday | Wednesday</span>
+            <span class="day">15th - 16th December 2026</span>
+            <span class="small">Khanvel Resort Silvassa</span>
           </div>
           <canvas id="scratch" aria-label="Scratch card. Drag across it to reveal the wedding date" role="img"></canvas>
         </div>
@@ -2471,6 +2520,7 @@
       <div class="floral flip" style="right:-44px;bottom:-230px;width:clamp(130px,26vw,250px);--dur:9s;--origin:90% 90%"
         aria-hidden="true"><img src="images/floral3.webp" alt=""></div>
       <div class="wrap">
+        <p class="blessing-top">With the blessings of Late Shri Bhagchand Godha &amp; Smt. Chanda Godha, we invite you to celebrate the beginning of our forever.</p>
         <p class="eyebrow">Two hearts entwine, as our families align</p>
         <h2>Our Families</h2>
         <div class="ornament" aria-hidden="true"><span>✦</span></div>
@@ -2494,8 +2544,6 @@
             <p>Mrs. Babita Kasliwal &amp; Mr. Sudhir Kasliwal</p>
           </div>
         </div>
-        <p class="blessing">With the blessings of Late Shri Bhagchand Godha &amp; Smt. Chanda Godha, we invite
-          you to celebrate the beginning of our forever.</p>
       </div>
     </section>
 
@@ -2912,7 +2960,7 @@
       <div class="wrap">
         <span class="mono" aria-hidden="true"></span>
         <p class="eyebrow">Until our forever begins</p>
-        <p class="script">Raj &amp; Bhoomika</p>
+        <p class="script">Raj <span class="amp">&amp;</span> Bhoomika</p>
         <div class="ornament" aria-hidden="true"><span>✦</span></div>
         <p class="tag" id="BhoomiKaRaj">#BhoomiKaRaj</p>
 
