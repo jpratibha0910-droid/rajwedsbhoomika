@@ -48,7 +48,7 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+SC:wght@400;500;600&family=Pinyon+Script&display=swap">
+    href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Cormorant+SC:wght@400;500;600;700&family=Pinyon+Script&display=swap">
   <style>
     :root {
       --paper: #FBF8F4;
@@ -728,19 +728,20 @@
       margin: 0 auto;
       gap: 12px;
       font-family: var(--caps);
-      font-weight: 600;
-      font-size: .95rem;
+      font-weight: 700;
+      font-size: 1.02rem;
       letter-spacing: .22em;
       text-transform: uppercase;
       color: #1A1526;
+      -webkit-text-stroke: 0.35px #1A1526;
       animation: fade-in 1s ease 2.6s both
     }
 
     .tap-hint::before,
     .tap-hint::after {
       content: "";
-      width: 32px;
-      height: 1.5px;
+      width: 36px;
+      height: 2px;
       background: linear-gradient(90deg, transparent, #8C6A2B)
     }
 
@@ -755,8 +756,13 @@
     }
 
     @keyframes pulse {
+      0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+      }
       50% {
-        opacity: .72
+        opacity: .92;
+        transform: scale(1.02);
       }
     }
 
@@ -2299,8 +2305,10 @@
       }
 
       .tap-hint {
-        font-size: .86rem;
+        font-size: .94rem;
         letter-spacing: .18em;
+        font-weight: 700;
+        -webkit-text-stroke: 0.35px #1A1526;
       }
 
       .couple {
@@ -2661,9 +2669,7 @@
             <div class="art-wrap video-wrap">
               <img class="wash" src="images/wash-blush.webp" alt="">
               <div class="video-card art">
-                <video autoplay muted loop playsinline preload="auto">
-                  <source src="videos/varmala.mp4" type="video/mp4">
-                </video>
+                <img src="images/wedding.jpg" alt="Lagan laagi re - Wedding" loading="lazy">
               </div>
             </div>
           </article>
@@ -2677,20 +2683,6 @@
               <div class="video-card art">
                 <video autoplay muted loop playsinline preload="auto">
                   <source src="videos/reception.mp4" type="video/mp4">
-                </video>
-              </div>
-            </div>
-          </article>
-
-          <article class="event">
-            <div style="text-align: center; margin-bottom: 1.5rem;">
-              <h3 class="sheen-text" style="margin: 0;">Phere</h3>
-            </div>
-            <div class="art-wrap video-wrap">
-              <img class="wash" src="images/wash-peach.webp" alt="">
-              <div class="video-card art">
-                <video autoplay muted loop playsinline preload="auto">
-                  <source src="videos/phere.mp4" type="video/mp4">
                 </video>
               </div>
             </div>
@@ -2720,7 +2712,7 @@
             <b>15 &amp; 16</b>
             <span class="side">Khanvel<br>Silvassa</span>
           </div>
-          <h3 class="vc-name">Gulmohar Resort</h3>
+          <h3 class="vc-name">Gulmohar Suites</h3>
           <p class="vc-addr">
             Khanvel, Silvassa, Dadra and Nagar Haveli<br>
             and Daman and Diu – 396230
@@ -2778,7 +2770,7 @@
             </g>
           </svg>
           <div class="map-foot">
-            <div><b>Gulmohar Resort</b><span>Khanvel, Silvassa</span></div>
+            <div><b>Gulmohar Suites</b><span>Khanvel, Silvassa</span></div>
             <a class="btn-dir" id="dir-link" target="_blank" rel="noopener">
               <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round">
                 <path d="M21 3 3 10.5l7.5 3 3 7.5z" />
@@ -2988,11 +2980,11 @@
 
         <div class="footer-compliments">
           <p class="footer-sub">Best compliments from</p>
-          <p class="footer-families">Godha family, relatives &amp; friends.</p>
+          <p class="footer-families">Godha Family - Jheerota.</p>
 
           <div class="footer-rsvp-box">
             <h4>RSVP</h4>
-            <p>Mrs. Tulika Godha &amp; Mr. Rupesh Godha</p>
+            <p>Mrs. Tulika Godha Mr. Rupesh Godha &amp;</p>
             <p>Godha Family</p>
           </div>
 
