@@ -43,7 +43,7 @@
     [hidden] {
       display: none !important
     }
-  
+
     .scroll-invite-hint {
       margin: 28px auto 0;
       display: flex;
@@ -66,11 +66,24 @@
     }
 
     @keyframes scrollBounce {
-      0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
-      40% { transform: translateY(6px); }
-      60% { transform: translateY(3px); }
+
+      0%,
+      20%,
+      50%,
+      80%,
+      100% {
+        transform: translateY(0);
+      }
+
+      40% {
+        transform: translateY(6px);
+      }
+
+      60% {
+        transform: translateY(3px);
+      }
     }
-</style>
+  </style>
   <title>Raj &amp; Bhoomika Wedding</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -762,7 +775,7 @@
       letter-spacing: .22em;
       text-transform: uppercase;
       color: var(--gold-deep);
-      
+
       animation: fade-in 1s ease 2.6s both
     }
 
@@ -785,10 +798,13 @@
     }
 
     @keyframes pulse {
-      0%, 100% {
+
+      0%,
+      100% {
         opacity: 1;
         transform: scale(1);
       }
+
       50% {
         opacity: .92;
         transform: scale(1.02);
@@ -873,6 +889,7 @@
       padding-inline: clamp(4px, 1vw, 8px) clamp(8px, 2vw, 16px);
     }
 
+    .couple .amp,
     .couple .weds {
       font-family: var(--script);
       font-style: normal;
@@ -2304,7 +2321,8 @@
         padding-inline: 6px 6px;
       }
 
-      .couple .weds {
+      .couple .amp,
+    .couple .weds {
         font-size: 2rem;
         margin: 0 4px;
       }
@@ -2476,14 +2494,13 @@
           height="917"></div>
       <div class="wrap hero-inner">
         <span class="mono" role="img" aria-label="Raj and Bhoomika monogram"></span>
-        <h1 class="couple"><span class="groom sheen-text">Raj</span><span class="weds sheen-text">Weds</span><span
-            class="bride sheen-text">Bhoomika</span></h1>
+        <h1 class="couple"><span class="groom sheen-text">Raj</span> <span class="amp sheen-text">&amp;</span> <span class="bride sheen-text">Bhoomika</span></h1>
         <div class="ornament" aria-hidden="true"><span>✦</span></div>
         <p class="eyebrow">Wedding Date</p>
         <div class="scratch-box">
           <div class="scratch-under">
             <span class="small">Tuesday | Wednesday</span>
-            <span class="day">15th - 16th December 2026</span>
+            <span class="day">15th &amp; 16th December 2026</span>
             <span class="small">Khanvel Resort Silvassa</span>
           </div>
           <canvas id="scratch" aria-label="Scratch card. Drag across it to reveal the wedding date" role="img"></canvas>
@@ -2496,8 +2513,9 @@
         </div>
 
         <div class="scroll-invite-hint" aria-label="Scroll down to read the card invite">
-          <span>Scroll down to read the wedding invite</span>
-          <svg viewBox="0 0 24 24" class="scroll-icon" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <span>Scroll down</span>
+          <svg viewBox="0 0 24 24" class="scroll-icon" width="20" height="20" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
             <path d="M7 10l5 5 5-5" />
           </svg>
         </div>
@@ -2920,7 +2938,7 @@
             <p class="rsvp-note">Your reply opens in WhatsApp, ready to send to the family.</p>
           </form>
         </div>
-</div>
+      </div>
     </section>
 
     <!-- ================= Footer ================= -->
